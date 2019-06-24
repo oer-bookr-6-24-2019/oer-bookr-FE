@@ -5,11 +5,13 @@ import LoginPage from "./views/LoginPage";
 import HomePage from "./views/HomePage";
 import SingleBookPage from "./views/SingleBookPage";
 import AddReviewPage from "./views/AddReviewPage";
-import PrivateRoute from './components/PrivateRoutes/PrivateRoute'
+import PrivateRoute from './components/privateRoutes/PrivateRoute'
+import NavBar from './components/navigation/NavBar'
 
 function App() {
   return (
     <div className="App">
+      <NavBar />
       <Switch>
         <Route path="/login" component={LoginPage} />
         <PrivateRoute path="/" exact component={HomePage} />
