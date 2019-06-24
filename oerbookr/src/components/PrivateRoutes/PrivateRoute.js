@@ -12,9 +12,3 @@ export default function PrivateRoute({ component: Component, ...rest }) {
     />
   );
 }
-
-state = {
-    username: '',
-    password: '',
-    loginCheck: false
-}
