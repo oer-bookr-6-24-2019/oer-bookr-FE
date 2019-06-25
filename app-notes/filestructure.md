@@ -41,4 +41,6 @@ index.js
   _generalContainerStyles.scss
   _bookCardStyles.scss  
 #  /helper-functions
+    display-functions.js
 #  /dummy-data-structures
+    review-structure.js
