@@ -20,9 +20,7 @@ export default class HomeContainer extends Component {
     return (
       <div>
         {this.state.books.map(book => {
-          return (
-            <BookCard book={book}/>            
-          );
+          return <BookCard key={book.bookid} book={book} />;
         })}
       </div>
     );
