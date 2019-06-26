@@ -24,7 +24,13 @@
             i {
                 margin: 0 1%;
                 cursor: pointer;
+                color: white;
             }
+
+        .selected {
+            color: gold;
+            
+        }
         }
     }
 }
