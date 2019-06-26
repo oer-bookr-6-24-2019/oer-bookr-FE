@@ -4,7 +4,7 @@ import { reviewStructure } from '../dummy-data-structures/review-structure';
 import axios from 'axios';
 
 class AddReviewPage extends React.Component {
-  state = { review: '', rating: null, user: '' };
+  state = { review: '', rating: 0, user: '' };
 
   changeHandler = e => {
     this.setState({
@@ -51,7 +51,7 @@ class AddReviewPage extends React.Component {
             {reviewStructure.map(ratingObj => {
               return (
                 <i
-                  className='far fa-star fa-3x'
+                  className={this.state.rating >= ratingObj.rating ? 'fas fa-star fa-3x selected' : 'fas fa-star fa-3x'}
                   onClick={() => this.setRating(ratingObj.rating)}
                 />
               );
