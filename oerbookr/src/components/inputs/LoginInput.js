@@ -5,7 +5,7 @@ class LoginInput extends Component {
   state = {
     username: '',
     password: '',
-    loggedIn: true,
+    loggingIn: true,
   };
 
   changeHandler = e => {
@@ -18,20 +18,10 @@ class LoginInput extends Component {
     e.preventDefault();
 
     axios
-      .post(
-        'https://sgs-lambda-bookr.herokuapp.com/oauth/token',
-        new URLSearchParams({
-          username: this.state.username,
-          password: this.state.password,
-          grant_type: 'password',
-        }),
-        {
-          headers: {
-            Authorization: 'Basic bGFtYmRhLWNsaWVudDpsYW1iZGEtc2VjcmV0',
-            'Content-Type': 'application/x-www-form-urlencoded',
-          },
-        },
-      )
+      .post('https://sgs-lambda-bookr.herokuapp.com/loginuser', {
+        username: this.state.username,
+        password: this.state.password,
+      })
       .then(res => {
         localStorage.setItem('token', res.data.access_token);
         this.props.history.push('/');
@@ -39,12 +29,27 @@ class LoginInput extends Component {
       .catch(err => console.log(err));
   };
 
+  registerHandler = e => {
+    e.preventDefault();
+
+    axios
+      .post('https://sgs-lambda-bookr.herokuapp.com/createnewuser', {
+        username: this.state.username,
+        password: this.state.password,
+      })
+      .then(res => {
+        localStorage.setItem('token', res.data.access_token);
+        this.props.history.push('/');
+      })
+      .catch(err => console.log(`error: ${err}`));
+  };
+
   render() {
     return (
       <div>
         <form
           onSubmit={
-            this.state.loggedIn ? this.loginHandler : this.registerHandler
+            this.state.loggingIn ? this.loginHandler : this.registerHandler
           }
         >
           <input
@@ -59,12 +64,12 @@ class LoginInput extends Component {
             name='password'
             onChange={this.changeHandler}
           />
-          <button>{this.state.loggedIn ? 'Login' : 'register'}</button>
+          <button>{this.state.loggingIn ? 'Login' : 'register'}</button>
         </form>
         <p>
           Not a user? click{' '}
           <span
-            onClick={() => this.setState({ loggedIn: !this.state.loggedIn })}
+            onClick={() => this.setState({ loggingIn: !this.state.loggingIn })}
           >
             here
           </span>{' '}
