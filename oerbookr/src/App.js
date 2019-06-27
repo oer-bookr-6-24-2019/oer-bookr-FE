@@ -5,7 +5,7 @@ import LoginPage from './views/LoginPage';
 import HomePage from './views/HomePage';
 import SingleBookPage from './views/SingleBookPage';
 import AddReviewPage from './views/AddReviewPage';
-import PrivateRoute from './components/privateRoutes/PrivateRoute';
+import PrivateRoute from './components/PrivateRoutes/PrivateRoute';
 import NavBar from './components/navigation/NavBar';
 import './styles/variables.scss';
 
