@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import ReviewCard from '../components/cards/ReviewCard';
 import Modal from 'react-responsive-modal';
+import '../styles/_singleBookPageStyles.scss';
 export default class SingleBookPage extends Component {
   state = {
     book: {},
@@ -40,12 +41,17 @@ export default class SingleBookPage extends Component {
         <h2>{this.state.book.author}</h2>
         <h2>{this.state.book.license}</h2>
         <h2>{this.state.book.publisher}</h2>
-        {this.state.fetched &&
-          this.state.book.reviews.map(review => {
-            return <ReviewCard key={review.reviewid} review={review} />;
-          })}
         <h2>
-          <Link to={`/add-review/${this.props.match.params.id}`}>
+          {this.state.fetched &&
+            this.state.book.reviews.map(review => {
+              return <ReviewCard key={review.reviewid} review={review} />;
+            })}
+        </h2>
+        <h2>
+          <Link
+            className='link'
+            to={`/add-review/${this.props.match.params.id}`}
+          >
             Add a Review
           </Link>{' '}
         </h2>

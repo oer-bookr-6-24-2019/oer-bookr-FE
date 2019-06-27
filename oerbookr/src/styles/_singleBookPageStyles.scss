@@ -1,0 +1,10 @@
+@import './variables.scss';
+
+h1,
+h2 {
+  color: $color-font;
+}
+
+.link {
+  color: $color-button;
+}
