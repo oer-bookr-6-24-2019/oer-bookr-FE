@@ -1,0 +1,11 @@
+@import 'variables.scss';
+
+.bookCard_container {  
+  margin-bottom: 10px;
+
+  h1,
+  h2 {
+    color: $color-font;
+  }
+  
+}

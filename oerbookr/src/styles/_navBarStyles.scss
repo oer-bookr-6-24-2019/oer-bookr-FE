@@ -1,11 +1,12 @@
+@import './variables.scss';
+
 .nav_bar_container {
   height: 50px;
   background: lightgrey;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   padding: 0 5%;
-  
 
   nav {
     width: 20%;
@@ -16,20 +17,20 @@
     font-family: 'Roboto';
 
     a {
-      color: black;
+      color: $color-background;
 
       &:active {
         color: white;
       }
 
       &:hover {
-          text-decoration: underline
+        text-decoration: underline;
       }
-
     }
 
-    .logout_button {
-      background: red;
+    .logout_button,
+    .login_button {
+      background: $color-button;
       font-style: normal;
       font-weight: 500;
       font-size: 1.6rem;
@@ -46,12 +47,12 @@
       align-items: center;
       &:hover {
         text-decoration: none;
-    }
+      }
       &:active {
-        background: #ca1536;
+        background: #70a38b;
       }
       &:hover {
-        background: #e90000;
+        background: #87b9a1;
       }
     }
   } // end nav

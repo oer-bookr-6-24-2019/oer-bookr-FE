@@ -1,0 +1,47 @@
+@import './variables.scss';
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  // border: 1px solid red;
+  text-align: center;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+
+    .input {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      text-align: center;
+      padding: 5px;
+    }
+    .btn {
+      background-color: $color-button;
+      color: $color-font;
+      border: none;
+      padding: 5px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      &:hover {
+        cursor: pointer;
+        opacity: 0.9;
+      }
+    }
+  }
+  p {
+    font-family: $font-primary;
+    color: $color-font;
+    font-size: 12px;
+
+    span {
+      color: $color-button;
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+}

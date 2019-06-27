@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';
+import '../../styles/_loginInputStyles.scss';
 class LoginInput extends Component {
   state = {
     username: '',
@@ -46,34 +47,40 @@ class LoginInput extends Component {
 
   render() {
     return (
-      <div>
+      <div className='container'>
         <form
           onSubmit={
             this.state.loggingIn ? this.loginHandler : this.registerHandler
           }
         >
           <input
+            className='input'
             value={this.state.username}
             type='text'
             name='username'
+            placeholder='username'
             onChange={this.changeHandler}
           />
           <input
+            className='input'
             value={this.state.password}
             type='password'
             name='password'
+            placeholder='password'
             onChange={this.changeHandler}
           />
-          <button>{this.state.loggingIn ? 'Login' : 'register'}</button>
+          <button className='btn'>
+            {this.state.loggingIn ? 'Login' : 'Register'}
+          </button>
         </form>
         <p>
-          Not a user? click{' '}
+          Not a user? Click{' '}
           <span
             onClick={() => this.setState({ loggingIn: !this.state.loggingIn })}
           >
             here
-          </span>{' '}
-          to register
+          </span>
+          &nbsp;to register
         </p>
       </div>
     );
