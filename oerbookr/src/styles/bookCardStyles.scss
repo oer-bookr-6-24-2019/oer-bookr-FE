@@ -2,8 +2,10 @@
 
 .bookCard_container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-evenly;
   max-width: 80rem;
+  width: 100%;
   margin: 0 auto;
   font-family: $font-primary;
   margin-bottom: 5rem;
@@ -11,16 +13,21 @@
   margin-bottom: 5rem;
 
   h1,
-  h2,
-  p {
+  h2 {
     color: $color-font;
   }
 
   h1 {
     font-size: 3rem;
+    margin-bottom: 2rem;
   }
-  h2,
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
   p {
+    margin-top: 2rem;
+    color: $color-button;
     font-size: 2rem;
   }
 
@@ -29,5 +36,8 @@
     img {
       width: 100%;
     }
+  }
+  .bookInfo_container {
+    text-align: left;
   }
 }
