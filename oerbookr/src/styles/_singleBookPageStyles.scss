@@ -1,10 +1,41 @@
 @import './variables.scss';
 
-h1,
-h2 {
-  color: $color-font;
-}
+.single_book_container {
+  font-family: $font-primary;
+  margin: 0 auto;
+  max-width: 80rem;
+  width: 100%;
 
-.link {
-  color: $color-button;
+  h1,
+  h2 {
+    color: $color-font;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  p {
+    margin-top: 2rem;
+    color: $color-button;
+    font-size: 2rem;
+  }
+
+  .link {
+    color: $color-button;
+  }
+  .book_img_container {
+    margin: 5rem auto;
+    width: 15rem;
+    img {
+      width: 100%;
+    }
+  }
+  .single_book_info {
+    display: inline-block;
+  }
 }

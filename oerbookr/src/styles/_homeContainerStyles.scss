@@ -1,7 +1,8 @@
 @import 'variables.scss';
 
 .header {
+  color: $color-font;
   font-size: 5rem;
-  margin: 4rem 0;
+  margin: 4rem 0 6rem 0;
   font-family: $font-primary;
 }
