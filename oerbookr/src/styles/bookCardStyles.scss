@@ -1,7 +1,8 @@
 @import 'variables.scss';
 
 .bookCard_container {
-  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
   max-width: 80rem;
   margin: 0 auto;
   font-family: $font-primary;
@@ -10,14 +11,23 @@
   margin-bottom: 5rem;
 
   h1,
-  h2 {
+  h2,
+  p {
     color: $color-font;
   }
 
   h1 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
-  h2 {
+  h2,
+  p {
     font-size: 2rem;
+  }
+
+  .book_img_container {
+    width: 10rem;
+    img {
+      width: 100%;
+    }
   }
 }
