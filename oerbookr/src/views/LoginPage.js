@@ -4,7 +4,7 @@ import '../styles/_loginPageStyles.scss';
 
 export default function LoginPage() {
   return (
-    <div>
+    <div>      
       <LoginInput />
     </div>
   );

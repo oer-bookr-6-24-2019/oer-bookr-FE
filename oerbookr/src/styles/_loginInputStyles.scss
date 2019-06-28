@@ -6,6 +6,13 @@
   max-width: 80rem;
   margin: 10rem auto 0 auto;
 
+  .login {
+    font-size: 2.5rem;
+    font-family: $font-primary;
+    color: $color-font;
+    margin-bottom: 2rem;
+  }
+
   form {
     display: flex;
     flex-direction: column;

@@ -48,6 +48,7 @@ class LoginInput extends Component {
   render() {
     return (
       <div className='container'>
+        <h1 className='login'>Login to Get Started</h1>
         <form
           onSubmit={
             this.state.loggingIn ? this.loginHandler : this.registerHandler
