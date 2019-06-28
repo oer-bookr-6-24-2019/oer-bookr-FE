@@ -1,11 +1,23 @@
 @import 'variables.scss';
 
-.bookCard_container {  
-  margin-bottom: 10px;
+.bookCard_container {
+  border: 1px solid red;
+  max-width: 80rem;
+  margin: 0 auto;
+  font-family: $font-primary;
+  margin-bottom: 5rem;
+  text-align: left;
+  margin-bottom: 5rem;
 
   h1,
   h2 {
     color: $color-font;
   }
-  
+
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
 }

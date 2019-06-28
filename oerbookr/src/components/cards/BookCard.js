@@ -6,10 +6,10 @@ const BookCard = props => {
   return (
     <div className='bookCard_container'>
       <Link to={`/book/${props.book.bookid}`}>
-        <h1>{props.book.booktitle}</h1>
-        <h2>{props.book.author}</h2>
-        <h2>{props.book.publisher}</h2>
-        <h2>{props.book.bookid}</h2>
+        <img src={props.book.imageurl} alt='book' />
+        <h1>Title: {props.book.booktitle}</h1>
+        <h2>Author: {props.book.author}</h2>
+        <h2>Publisher: {props.book.publisher}</h2>
       </Link>
     </div>
   );

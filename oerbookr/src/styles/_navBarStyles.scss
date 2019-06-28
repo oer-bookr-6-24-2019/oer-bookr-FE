@@ -1,12 +1,19 @@
 @import './variables.scss';
 
 .nav_bar_container {
-  height: 50px;
-  background: lightgrey;
+  height: 7rem;
+  background: $color-font;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 5%;
+
+  .img_container {
+    width: 10%;
+    img {
+      width: 100%;
+    }
+  }
 
   nav {
     width: 20%;
@@ -39,8 +46,8 @@
       color: white;
       box-shadow: 4px 5px 1px -1px RGBA(0, 0, 0, 0.1);
       border-radius: 4px;
-      height: 32px;
-      width: 100px;
+      height: 3.2rem;
+      width: 10rem;
       padding: none;
       display: flex;
       justify-content: center;
