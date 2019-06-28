@@ -46,3 +46,32 @@
     color: red;
   }
 }
+.modalStyles {
+  font-family: $font-primary;
+  width: 40rem;
+  height: 10rem;
+  p {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .container {
+    margin: 0 auto;
+    .modalButton {
+      color: #fff;
+      margin-right: 1rem;
+      width: 8rem;
+      height: 4rem;
+      border: none;
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+    .yes {
+      background: $color-button;
+    }
+    .no {
+      background: red;
+    }
+  }
+}

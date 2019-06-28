@@ -71,12 +71,21 @@ export default class SingleBookPage extends Component {
             <Modal
               open={this.state.isOpen}
               closeIconSize={25}
-              styles={{}}
               onClose={() => this.setState({ isOpen: false })}
+              center
             >
-              <p>Are you sure?</p>
-              <button onClick={this.deleteBookHandler}>Yes</button>
-              <button>No</button>
+              <div className='modalStyles'>
+                <p>Are You Sure?</p>
+                <div className='container'>
+                  <button
+                    className='modalButton yes'
+                    onClick={this.deleteBookHandler}
+                  >
+                    Yes
+                  </button>
+                  <button className='modalButton no'>No</button>
+                </div>
+              </div>
             </Modal>
           </h2>
         </div>
