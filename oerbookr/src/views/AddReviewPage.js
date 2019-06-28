@@ -51,13 +51,19 @@ class AddReviewPage extends React.Component {
             {reviewStructure.map(ratingObj => {
               return (
                 <i
-                  className={this.state.rating >= ratingObj.rating ? 'fas fa-star fa-3x selected' : 'fas fa-star fa-3x'}
+                  className={
+                    this.state.rating >= ratingObj.rating
+                      ? 'fas fa-star fa-3x selected'
+                      : 'fas fa-star fa-3x'
+                  }
                   onClick={() => this.setRating(ratingObj.rating)}
                 />
               );
             })}
           </div>
-          <button onClick={this.reviewSubmitHandler}>Add Review</button>
+          <button className='btn' onClick={this.reviewSubmitHandler}>
+            Add Review
+          </button>
         </form>
       </div>
     );

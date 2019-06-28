@@ -7,6 +7,7 @@
     align-items: flex-start;
 
     label {
+      color: #fff;
       font-size: 2rem;
       font-family: Roboto;
       margin-bottom: 7px;
@@ -28,9 +29,25 @@
       }
 
       .selected {
-        background: -webkit-linear-gradient(rgb(255, 233, 108), rgb(245, 204, 0));
+        background: -webkit-linear-gradient(
+          rgb(255, 233, 108),
+          rgb(245, 204, 0)
+        );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+      }
+    }
+    .btn {
+      background-color: $color-button;
+      color: $color-font;
+      border: none;
+      font-size: 1.6rem;
+      padding: 1rem;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      &:hover {
+        cursor: pointer;
+        opacity: 0.9;
       }
     }
   }
