@@ -47,7 +47,7 @@ export default class SingleBookPage extends Component {
           <h2>Author: {this.state.book.author}</h2>
           <h2>Publisher: {this.state.book.publisher}</h2>
           <h2>
-            <h2>Reviews</h2>
+            <h2 className='reviews'>Reviews:</h2>
             {this.state.fetched &&
               this.state.book.reviews.map(review => {
                 return <ReviewCard key={review.reviewid} review={review} />;
@@ -62,7 +62,12 @@ export default class SingleBookPage extends Component {
             </Link>{' '}
           </h2>
           <h2>
-            <a onClick={() => this.setState({ isOpen: true })}>Delete Book</a>
+            <a
+              className='deleteBook'
+              onClick={() => this.setState({ isOpen: true })}
+            >
+              Delete Book
+            </a>
             <Modal
               open={this.state.isOpen}
               closeIconSize={25}

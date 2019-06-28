@@ -38,4 +38,11 @@
   .single_book_info {
     display: inline-block;
   }
+  .reviews {
+    margin: 1rem 0;
+  }
+  .deleteBook {
+    cursor: pointer;
+    color: red;
+  }
 }
